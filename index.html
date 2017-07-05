@@ -3,19 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sticky Bits Demo</title>
-<link rel="stylesheet" href="/css/main.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/dist/css/main.css">
+
 </head>
-<body>
-  <h1 ng-controller="appCtrl" ng-cloak>{{helloMessage}}</h1>
+<body ng-cloak ng-controller="appCtrl">
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>{{title}}</h1>
+    <p>Bootstrap 4</p>
+
+  </div>
+
+<div class="card text-center">
+  <div class="card-header">
+    Card 1
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    Footer
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+<div class="card text-center">
+  <div class="card-header">
+    Card 2
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    Footer
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
 
 
+</div>
+
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://code.angularjs.org/1.4.0/angular.js"></script>
     <script type="text/javascript">
       angular.module('app', []).controller('appCtrl',
       function($scope){
-        $scope.helloMessage = "sticky bits demo";
+        $scope.title = "sticky bits demo";
       })
     </script>
+
+
 	
 </body>
-</html>
+</html> 
+

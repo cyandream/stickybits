@@ -1,9 +1,0 @@
-body {
-    background-color: aliceblue;
-}
-
-
-/* Class .ng-cloak hides text while anglar library loads, stops flickering */
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}

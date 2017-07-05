@@ -1,0 +1,104 @@
+body {
+    background-color: aliceblue;
+}
+
+/* Class .ng-cloak hides text while anglar library loads, stops flickering */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+/* manage card */
+.manage-card-component {
+  .card{
+    margin:auto;
+    border: 1px solid $brand­-secondary;
+    width: 280px;
+    @media (min-width: $sm-break) {
+      width: 400px;
+    }
+  }
+
+  .section-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+  .card-header{
+    background-color: $color-lightblue;
+    height:65px;
+    padding: 0;
+  }
+
+  .feature {
+    padding-top:10px;
+    font-weight: 300;
+    font-size: 1.15rem;
+    color: $color-blue;
+    border-bottom: 3px solid $color-ghost;
+    padding-bottom: 30px;
+    text-align:center;
+  }
+
+  ul {
+    text-align: left;
+    width: 90%;
+    list-style: none;
+    padding: 50px 0 50px 50px;
+
+    li {
+      text-indent: -12px;
+      padding-left: 15px;
+      padding-bottom: 10px;
+      &:before{
+        color: #002776; 
+        font-size: 15px;
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  li.sm-icon--checklist:before {
+    content: "\F0CB";
+    margin: 0 7px 0 -15px;}
+  li.sm-icon--user:before {
+      content: "\F007";
+      margin: 0 15px 0 -15px;}
+  li.sm-icon--location:before {
+      content: "\F041";
+      margin: 0 18px 0 -15px;}
+  li.sm-icon--classification:before {
+      content: "\F097";
+      margin: 0 12px 0 -15px;}
+  li.sm-icon--asset:before {
+      content: "\F0A0";
+      margin: 0 11px 0 -15px;}
+  li.sm-icon--inspectionschedule:before {
+      content: "\F044";
+      margin: 0 11px 0 -15px;}
+  li.sm-icon--inspectionassignment:before {
+      content: "\F022";
+      margin: 0 12px 0 -15px;}
+
+
+  /* Large Icons Loop */
+  $icons: ( user: '\f007', location: '\f041', classification: '\f097', asset: '\f0a0 ', inspectionschedule: '\f044', inspectionassignment: '\f022', checklist: '\f0cb');
+  @each $name,
+  $value in $icons {
+    .icon--#{$name}:before {
+      content: $value;
+      font-family: FontAwesome;
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      color: $color-blue;
+    }
+  }
+  
+}
+
+/* Safari 7.1+ Hack- Safari Height issue */
+_::-webkit-full-page-media, _:future, :root .safari_only {
+  height: 530px;
+}

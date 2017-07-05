@@ -4,15 +4,17 @@
   "description": "Sticky Bits Library with Angular 1.5 framework",
   "scripts": {
     "lite": "lite-server --port 10001",
-    "start": "npm run lite"
+    "start": "npm run lite",
+    "build-css": "node-sass --include-path scss scss/main.scss dist/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css && lite-server --port 10001\""
   },
   "author": "Michelle Burton",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^1.3.1"
-  },
-  "main": "index.js",
-  "dependencies": {
+    "lite-server": "^1.3.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "stickybits": "^1.3.5"
-  }
+  },
+  "main": "index.js"
 }

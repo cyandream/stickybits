@@ -1,0 +1,8 @@
+Install
+npm install
+
+Watch:
+npm run watch-css
+
+View
+http://localhost:10001/
